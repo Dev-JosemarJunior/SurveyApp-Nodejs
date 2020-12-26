@@ -1,0 +1,17 @@
+surveyapp
+F9YOxoyI3svVoZ4l
+
+connection string
+mongodb+srv://surveyapp:<password>@surveyapp.ziuhm.mongodb.net/<dbname>?retryWrites=true&w=majority
+
+
+const MongoClient = require('mongodb').MongoClient;
+const uri = "mongodb+srv://surveyapp:<password>@surveyapp.ziuhm.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+});
+
+
